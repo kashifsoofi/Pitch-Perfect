@@ -45,12 +45,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Czw-D9-7nz" firstAttribute="top" secondItem="gVw-Ac-7Cz" secondAttribute="bottom" constant="130" id="MwO-k8-fe6"/>
-                            <constraint firstAttribute="centerX" secondItem="Czw-D9-7nz" secondAttribute="centerX" id="P6F-yL-8Yu"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Czw-D9-7nz" secondAttribute="bottom" constant="40" id="Ap7-gy-AQW"/>
                             <constraint firstAttribute="centerX" secondItem="gVw-Ac-7Cz" secondAttribute="centerX" constant="-0.5" id="SMQ-8c-Ojs"/>
                             <constraint firstAttribute="centerX" secondItem="wfI-HH-CWe" secondAttribute="centerX" id="XuL-wQ-MrQ"/>
                             <constraint firstAttribute="centerY" secondItem="wfI-HH-CWe" secondAttribute="centerY" id="qnG-wu-oHJ"/>
                             <constraint firstItem="gVw-Ac-7Cz" firstAttribute="top" secondItem="wfI-HH-CWe" secondAttribute="bottom" constant="8" id="v9N-hN-ALZ"/>
+                            <constraint firstAttribute="centerX" secondItem="Czw-D9-7nz" secondAttribute="centerX" id="vCA-k4-Z6K"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -59,12 +59,12 @@
                                 <exclude reference="Czw-D9-7nz"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="SMQ-8c-Ojs"/>
-                                <exclude reference="v9N-hN-ALZ"/>
-                                <exclude reference="MwO-k8-fe6"/>
-                                <exclude reference="P6F-yL-8Yu"/>
                                 <exclude reference="XuL-wQ-MrQ"/>
                                 <exclude reference="qnG-wu-oHJ"/>
+                                <exclude reference="SMQ-8c-Ojs"/>
+                                <exclude reference="v9N-hN-ALZ"/>
+                                <exclude reference="vCA-k4-Z6K"/>
+                                <exclude reference="Ap7-gy-AQW"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -74,12 +74,12 @@
                                 <include reference="Czw-D9-7nz"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="SMQ-8c-Ojs"/>
-                                <include reference="v9N-hN-ALZ"/>
-                                <include reference="MwO-k8-fe6"/>
-                                <include reference="P6F-yL-8Yu"/>
                                 <include reference="XuL-wQ-MrQ"/>
                                 <include reference="qnG-wu-oHJ"/>
+                                <include reference="SMQ-8c-Ojs"/>
+                                <include reference="v9N-hN-ALZ"/>
+                                <include reference="vCA-k4-Z6K"/>
+                                <include reference="Ap7-gy-AQW"/>
                             </mask>
                         </variation>
                     </view>
@@ -124,15 +124,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jc6-bO-9vg">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="276" y="145" width="46" height="30"/>
-                                </variation>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWi-xM-5bo">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="slowbutton">
@@ -142,30 +133,63 @@
                                     <action selector="playSlowAudio:" destination="Lzs-Q7-uU0" eventType="touchUpInside" id="eOC-Ku-G5K"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jc6-bO-9vg">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="fastbutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playFastAudio:" destination="Lzs-Q7-uU0" eventType="touchUpInside" id="SZc-Xr-4zH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Daj-Ei-09l">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stopbutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2It-ZZ-N2L"/>
+                                    <action selector="stopAudio:" destination="Lzs-Q7-uU0" eventType="touchUpInside" id="ys5-hB-CG4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UWi-xM-5bo" firstAttribute="leading" secondItem="9DJ-FK-nCp" secondAttribute="leadingMargin" constant="30" id="7kd-8G-dzW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jc6-bO-9vg" secondAttribute="trailing" constant="30" id="Gln-GY-MPs"/>
+                            <constraint firstItem="sa3-Gp-WGg" firstAttribute="top" secondItem="Daj-Ei-09l" secondAttribute="bottom" constant="40" id="cj2-5o-Wu1"/>
                             <constraint firstItem="UWi-xM-5bo" firstAttribute="top" secondItem="cRj-ze-Ysl" secondAttribute="bottom" constant="50" id="nPO-WX-WIO"/>
+                            <constraint firstAttribute="centerX" secondItem="Daj-Ei-09l" secondAttribute="centerX" id="oGG-Kw-xkf"/>
+                            <constraint firstItem="Jc6-bO-9vg" firstAttribute="top" secondItem="cRj-ze-Ysl" secondAttribute="bottom" constant="50" id="vHU-Xe-mHD"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Jc6-bO-9vg"/>
                                 <exclude reference="UWi-xM-5bo"/>
+                                <exclude reference="Jc6-bO-9vg"/>
+                                <exclude reference="Daj-Ei-09l"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="7kd-8G-dzW"/>
                                 <exclude reference="nPO-WX-WIO"/>
+                                <exclude reference="Gln-GY-MPs"/>
+                                <exclude reference="vHU-Xe-mHD"/>
+                                <exclude reference="oGG-Kw-xkf"/>
+                                <exclude reference="cj2-5o-Wu1"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Jc6-bO-9vg"/>
                                 <include reference="UWi-xM-5bo"/>
+                                <include reference="Jc6-bO-9vg"/>
+                                <include reference="Daj-Ei-09l"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="7kd-8G-dzW"/>
                                 <include reference="nPO-WX-WIO"/>
+                                <include reference="Gln-GY-MPs"/>
+                                <include reference="vHU-Xe-mHD"/>
+                                <include reference="oGG-Kw-xkf"/>
+                                <include reference="cj2-5o-Wu1"/>
                             </mask>
                         </variation>
                     </view>
@@ -176,6 +200,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fastbutton" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slowbutton" width="100" height="100"/>
         <image name="stopbutton" width="50" height="50"/>

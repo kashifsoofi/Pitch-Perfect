@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RecordSoundsViewController.swift
 //  Pitch Perfect
 //
 //  Created by Kashif Jamal Soofi on 25/11/2014.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RecordSoundsViewController: UIViewController {
 
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var recordingInProgress: UILabel!
@@ -35,7 +35,6 @@ class ViewController: UIViewController {
         stopButton.hidden = false
         recordingInProgress.hidden = false
         // TODO: Record the user's voice
-        println("in recordAudio")
     }
 
     @IBAction func stopAudio(sender: AnyObject) {
